@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import  InputField  from './Components/Inputfolder/InputField';
+// import { Input } from 'reactstrap';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Our project is business selling.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <InputField type="password"/>
+      <InputField type="text"/>
+      <InputField type="email"/>
+      <InputField type="number"/>
+      <InputField type="radio"/>
+      <InputField type="radio"/>
+      <InputField type="checkbox"/>
+      <InputField type="date"/>
+      <InputField type="time"/>
     </div>
   );
 }

@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ButtonComponent from '../../Components/Button/Button';
+import "./test1.scss"
 
-function App() {
+function Test() {
   return (
-    <div className="App">
+    <div className="example">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <p className="font">
           test link
         </p>
         <a
@@ -17,9 +17,10 @@ function App() {
         >
           Learn React
         </a>
+        <ButtonComponent></ButtonComponent>
       </header>
     </div>
   );
 }
 
-export default App;
+export default Test;

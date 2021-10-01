@@ -1,8 +1,7 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import history from "./history";
-import Test from "./test";
-import Test1 from "./test2";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import history from "../../history";
+import Test from "../../Pages/test";
 
 function App() {
   return (
@@ -10,7 +9,7 @@ function App() {
       <Router history={history}>
         <Switch>
           <Route exact path="/" component={Test} />
-          <Route exact path="/test" component={Test1} />
+          <Route exact path="/test" component={Test} />
         </Switch>
       </Router>
     </div>

@@ -1,0 +1,31 @@
+// Main scss
+$theme-colors: (
+    "primary":#5C6AC4
+);
+
+$theme-colors: (
+    "secondary":#fdfdfd
+);
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'antd/dist/antd.css';
+@import "react-datepicker/dist/react-datepicker.css";
+@import 'react-date-range/dist/styles.css'; // main css file
+@import 'react-date-range/dist/theme/default.css'; // theme css fil
+
+
+// Component
+@import "../Components/styles/index.scss";
+
+// Pages
+
+@import "../Pages/styles/indes.scss";
+
+// mixins
+@import "./mixins";
+
+.fixed-center{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}

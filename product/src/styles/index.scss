@@ -8,10 +8,10 @@ $theme-colors: (
 );
 
 @import 'bootstrap/dist/css/bootstrap.min.css';
-@import 'antd/dist/antd.css';
-@import "react-datepicker/dist/react-datepicker.css";
-@import 'react-date-range/dist/styles.css'; // main css file
-@import 'react-date-range/dist/theme/default.css'; // theme css fil
+// @import 'antd/dist/antd.css';
+// @import "react-datepicker/dist/react-datepicker.css";
+// @import 'react-date-range/dist/styles.css'; // main css file
+// @import 'react-date-range/dist/theme/default.css'; // theme css fil
 
 
 // Component
@@ -19,7 +19,7 @@ $theme-colors: (
 
 // Pages
 
-@import "../Pages/styles/indes.scss";
+// @import "../Pages/styles/indes.scss";
 
 // mixins
 @import "./mixins";

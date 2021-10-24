@@ -1,0 +1,81 @@
+.header
+{
+    /* display: flex; */
+    position:static;
+   
+}
+.button
+{
+    display: flex;
+    align-items: column; 
+}
+.button-one
+{
+    display: flex;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.button-two
+{
+    display: flex;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.button-three
+{
+    display: flex;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.button-four
+{
+    display: flex;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.navi
+{
+    display: flex;
+    align-items: center;
+    justify-content: row;
+    /* position: absolute; */
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+.home.active 
+{
+    border-bottom: 2px solid #29f061;
+    color: black;
+}
+
+.business.active
+{
+    border-bottom: 2px solid #29f061;
+    color: black;
+}
+.franchises.active
+{
+    border-bottom: 2px solid #29f061;
+    color: black;
+}
+.investors.active
+{
+    border-bottom: 2px solid #29f061;
+    color: black;
+}
+.How.active
+{
+    border-bottom: 2px solid #29f061;
+    color: black;
+}
+.company.active
+{
+    border-bottom: 2px solid #29f061;
+    color: black;
+}
+.logo
+{
+    display: flex;
+    width: 75px;
+    height: 75px;
+}

@@ -1,0 +1,24 @@
+// Core - Image Component
+.img {
+  img {
+    border: 0 none;
+    max-width: auto !important;
+  }
+
+  &-fit img {
+    display: inline-block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &.img-rnd {
+    img {
+      border: 0;
+      border-radius: 50%;
+    }
+  }
+  &-spc img {
+    padding-right: 10px;
+  }
+}

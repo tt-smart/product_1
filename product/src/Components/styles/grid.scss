@@ -1,0 +1,145 @@
+// Core - Grid Styles
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+@mixin media-break($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+@mixin grid-media($break) {
+  @include media-break($break) {
+    > .grd-cel:not(:last-child) {
+      padding-right: 10px;
+    }
+
+    &.grd-gts > .grd-cel:not(:last-child) {
+      padding-right: 5px;
+    }
+
+    &.grd-gtm > .grd-cel:not(:last-child) {
+      padding-right: 15px;
+    }
+
+    &.grd-gtb > .grd-cel:not(:last-child) {
+      padding-right: 20px;
+    }
+
+    // Vertical
+    &.grd-vrt,
+    &.grd-vrt.grd-gts,
+    &.grd-vrt.grd-gtm,
+    &.grd-vrt.grd-gtb {
+      > .grd-cel {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.grd {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &-cel {
+    display: block;
+    margin: 0;
+
+    &-alc {
+      display: flex !important;
+      justify-content: center !important;
+    }
+
+    &-ale {
+      display: flex !important;
+      justify-content: flex-end !important;
+    }
+
+    &-alb {
+      display: flex !important;
+      justify-content: baseline !important;
+    }
+  }
+
+  &-vrt {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
+
+    > .grd-cel {
+      display: block;
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+
+    &.grd-gts > .grd-cel:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    &.grd-gtm > .grd-cel:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &.grd-gtb > .grd-cel:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &-inl {
+    display: inline-flex;
+
+    > &-cel {
+      display: inline-block;
+    }
+  }
+
+  &-bxs {
+    @include grid-media("xs");
+  }
+
+  &-bsm {
+    @include grid-media("sm");
+  }
+
+  &-bmd {
+    @include grid-media("md");
+  }
+
+  &-blg {
+    @include grid-media("lg");
+  }
+
+  &-bxl {
+    @include grid-media("xl");
+  }
+
+  &-als {
+    align-items: flex-start;
+  }
+
+  &-alc {
+    align-items: center;
+  }
+
+  &-ale {
+    align-items: flex-end;
+  }
+
+  &-alb {
+    align-items: baseline;
+  }
+}

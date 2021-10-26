@@ -1,0 +1,66 @@
+// Avatar Component
+@mixin avatar-base($size) {
+  height: $size;
+  width: $size;
+}
+
+.avt {
+  @include avatar-base(40px);
+  background: #417ceb;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  font-weight: 300;
+  line-height: 1.25;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+
+  &.avt-sml {
+    @include avatar-base(20px);
+  }
+
+  &.avt-mdm {
+    @include avatar-base(30px);
+  }
+
+  &.avt-lge {
+    @include avatar-base(60px);
+  }
+
+  .title {
+    align-self: center;
+    font-size: 13px;
+    font-weight: 600;
+    position: relative;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  .bdg {
+    background: #00bf49;
+    border-radius: 50%;
+    bottom: 14.64%;
+    height: 0.7em;
+    position: absolute;
+    right: 14.64%;
+    transform: translate(50%, 50%);
+    width: 0.7em;
+
+    &.bdg-sml {
+      height: 0.4em;
+      width: 0.4em;
+    }
+
+    &.bdg-mdm {
+      height: 0.6em;
+      width: 0.6em;
+    }
+
+    &.bdg-lge {
+      height: 0.8em;
+      width: 0.8em;
+    }
+  }
+}

@@ -1,31 +1,42 @@
-import React from 'react'
-import "./style.scss"
+import React from "react";
+import "./style.scss";
 import {
-    Navbar,
-    Container,
-    Nav,
-    Form,
-    Button,
-    Tabs,
-    Tab,
-    Card,
-    Row,
-    Link,
-    Col,
-    NavDropdown,
-    FormControl,
-  } from "react-bootstrap";
-  import SearchIcon from "@material-ui/icons/Search";
+  Navbar,
+  Container,
+  Nav,
+  Form,
+  Button,
+  Tabs,
+  Tab,
+  Card,
+  Row,
+  Link,
+  Col,
+  NavDropdown,
+  FormControl,
+} from "react-bootstrap";
+import SearchIcon from "@material-ui/icons/Search";
 import BusinessIcon from "@material-ui/icons/Business";
 import AssignmentIndIcon from "@material-ui/icons/AssignmentInd";
 
-import InputField from "../Input/InputField"
+import { Input } from "../Input";
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
- function Head() {
-    return (
-        <div>
-            <div className="header">
+import { useHistory } from "react-router";
+import cookie from "react-cookies";
+
+function Head() {
+  const history = useHistory();
+
+  const handlelogout = () => {
+    history.push("/login");
+    localStorage.clear();
+    cookie.remove("business", { path: "/" });
+  };
+
+  return (
+    <div>
+      <div className="header">
         <Navbar bg="light" expand="lg">
           <img
             src="https://w7.pngwing.com/pngs/231/404/png-transparent-tarpaulin-logo-canvas-canvas-background-service-textile-logo.png"
@@ -37,7 +48,7 @@ import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
           <Navbar.Collapse id="navbarScroll">
             <Row className="g-2">
               <Col md>
-                <InputField
+                <Input
                   type="search"
                   placeholder="Business Type"
                   className="mr-2"
@@ -45,7 +56,7 @@ import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
                 />
               </Col>
               <Col md>
-                <InputField
+                <Input
                   type="search"
                   placeholder="Location"
                   className="mr-2"
@@ -62,7 +73,12 @@ import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
             <Button variant="primary" size="sm" className="button-three">
               <BusinessIcon /> Business Valuation
             </Button>
-            <Button variant="primary" size="sm" className="button-four">
+            <Button
+              variant="primary"
+              size="sm"
+              className="button-four"
+              onClick={() => handlelogout()}
+            >
               Login
             </Button>
 
@@ -120,7 +136,7 @@ import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
           </Nav>
         </div>
       </div>
-        </div>
-    )
+    </div>
+  );
 }
 export default Head;

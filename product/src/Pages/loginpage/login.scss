@@ -1,0 +1,143 @@
+/* whole container */
+.wrapper {
+    height: 100%;
+    width: 95%;
+  }
+  .login-heading {
+    display: flex;
+    margin-left: 10%;
+    font-size: 130%;
+    font-weight: 10%;
+  }
+  .hor-line {
+    margin-left: 10%;
+    width: 80%;
+  }
+  .login-page {
+    background-color: #eeeeee;
+    display: flex;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+  
+    width: 80%;
+  }
+  .input-email {
+    display: flex;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+  }
+  .input-password {
+    display: flex;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+  }
+  .input-Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    background-color: #1cc0e3;
+  }
+  .Forgot-password {
+    text-decoration: none;
+    display: flex;
+    margin-top: 3%;
+    padding-left: 10%;
+    font-size: 12px;
+  }
+  .span-name {
+    display: flex;
+    margin-top: 3%;
+    padding-left: 10%;
+    font-size: 12px;
+  }
+  .v1 {
+    border-left: 2px solid #eeeeee;
+    height: 60%;
+  }
+  .register {
+    background-color: #eeeeee;
+    display: flex;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 95%;
+    width: 80%;
+  }
+  .content-rignt {
+    margin-top: 5%;
+  }
+  .content-form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .first-name {
+    width: 45%;
+  }
+  .last-name {
+    width: 45%;
+  }
+  .email {
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+  }
+  .password {
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+  }
+  .number {
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+  }
+  .city {
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+  }
+  .select {
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+  }
+  .check-item {
+    display: flex;
+    margin-top: -16px;
+  }
+  .checkbox {
+    display: flex;
+    margin-top: 3%;
+    margin-left: 10%;
+  }
+  .agree {
+    display: flex;
+  
+    padding-left: 16%;
+    font-size: 12px;
+  }
+  .terms {
+    display: flex;
+    text-decoration: none;
+    font-size: 12px;
+    padding-left: 2%;
+    padding-right: 75px;
+  }
+  

@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonComponent from '../../Components/Button/Button';
+// import ButtonComponent from '../../Components/Button/Button';
 import "./test1.scss"
 
 function Test() {
@@ -17,7 +17,7 @@ function Test() {
         >
           Learn React
         </a>
-        <ButtonComponent></ButtonComponent>
+        {/* <ButtonComponent></ButtonComponent> */}
       </header>
     </div>
   );

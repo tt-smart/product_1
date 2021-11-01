@@ -21,152 +21,34 @@ import { Button } from "react-bootstrap";
 import { Table, Pagination } from "antd";
 import { businesslist } from "../helpers/table_data";
 import Range from "react-range-progress";
-
-const businesstype = [
-  {
-    value: "option1",
-    label: "Solo",
-  },
-  {
-    value: "option2",
-    label: "Partnership",
-  },
-];
-
-const subindustry = [
-  {
-    value: "option1",
-    label: "Auto",
-  },
-  {
-    value: "option2",
-    label: "Partnership",
-  },
-];
-const stateoptions = [
-  {
-    value: "option1",
-    label: "TamilNadu",
-  },
-  {
-    value: "option2",
-    label: "Kerala",
-  },
-];
-const cityoptions = [
-  {
-    value: "option1",
-    label: "Erode",
-  },
-  {
-    value: "option2",
-    label: "Karur",
-  },
-];
-
-const companytype = [
-  {
-    value: "option1",
-    label: "Owned",
-  },
-  {
-    value: "option2",
-    label: "Rent",
-  },
-];
-
-const businessmodal = [
-  {
-    value: "option1",
-    label: "Modal1",
-  },
-  {
-    value: "option2",
-    label: "Modal2",
-  },
-];
-
-const licenseavailable = [
-  {
-    value: "option1",
-    label: "Yes",
-  },
-  {
-    value: "option2",
-    label: "No",
-  },
-];
-
-const anualturnover = [
-  {
-    value: "option1",
-    label: "Yes",
-  },
-  {
-    value: "option2",
-    label: "No",
-  },
-];
-
-const netprofitturnover = [
-  {
-    value: "option1",
-    label: "Yes",
-  },
-  {
-    value: "option2",
-    label: "No",
-  },
-];
-
-const ebitdamargin = [
-  {
-    value: "option1",
-    label: "Yes",
-  },
-  {
-    value: "option2",
-    label: "No",
-  },
-];
-
-const amountsdetails = [
-  {
-    value: "option1",
-    label: "Thousand",
-  },
-  {
-    value: "option2",
-    label: "Lakhs",
-  },
-  {
-    value: "option3",
-    label: "Core",
-  },
-];
-
-const reasonforsale = [
-  {
-    value: "option1",
-    label: "Retirement",
-  },
-  {
-    value: "option2",
-    label: "Not Intersted",
-  },
-];
+import {
+  businesstype,
+  subindustry,
+  stateoptions,
+  cityoptions,
+  companytype,
+  businessmodal,
+  licenseavailable,
+  anualturnover,
+  netprofitturnover,
+  ebitdamargin,
+  amountsdetails,
+  reasonforsale
+} from "../helpers/options_data";
+import Header from "../../Components/Header/header";
 
 const BusinessRegister = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [progressstatus, setProgressStatus] = useState(60);
 
   const onRangeChanged = (value) => {
-    setProgressStatus(value)
-  }
+    setProgressStatus(value);
+  };
 
   return (
-    <div className="wrapper d-flex flex-row">
-      <Grid break="lg" className="wrapper d-flex flex-row">
+    <div className="wrapper">
+      <Header />
+      <Grid break="lg">
         <Grid.Cell span={30}>
           <Box component={Paper} p={3} className="m-2">
             <Row>

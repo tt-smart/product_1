@@ -1,46 +1,102 @@
-import React from "react";
-import { Button } from "reactstrap";
-import PropTypes from "prop-types";
+// Button Component
 
-//main component
-const ButtonComponent = (props) => {
-  const { active, block, disabled, color, outline, arialabel, label } = props;
+import React from "react";
+import PropTypes from "prop-types";
+import isEqual from "react-fast-compare";
+import clsx from "clsx";
+
+import { addToClass } from "../../helper/styles";
+
+//Main Component
+const Button = (props) => {
+  const { variant, size, label, onClick, isDisabled, iconName, type } = props;
+
+  function handleClick(event) {
+    // alert("working");
+    props&&props.onButtonClick&& props.onButtonClick(label);
+    if (onClick) {
+      onClick(event);
+    }
+  }
+
+  const cls = {
+    btn: true,
+    "btn-dis": isDisabled
+  };
+
+  addToClass(
+    cls,
+    {
+      primary: "btn-prm",
+      quickbook: "btn-quick",
+      secondary: "btn-sec",
+      normal: "btn-nrm",
+      link: "btn-lnk",
+      error: "btn-err",
+      login: "btn-lgn",
+      signup: "btn-sup",
+      discard: "btn-dic",
+      outline: "btn-out",
+      normalOutline: "btn-nro",
+      date: "btn-dte",
+      linkbtn: "btn-lnknew",
+      default: "btn-dft",
+      add: "btn-add",
+      upload: "btn-upload"
+    },
+    variant
+  );
+
+  addToClass(
+    cls,
+    {
+      small: "btn-sml",
+      medium: "btn-med",
+      big: "btn-big",
+      large: "btn-lrg"
+    },
+    size
+  );
 
   return (
-    <div>
-      <Button
-        active={active}
-        block={block}
-        color={color}
-        disabled={disabled}
-        outline={outline}
-        arialabel={arialabel}
-      >
-        {label}
-      </Button>
-    </div>
+    <button className={clsx(cls)} onClick={handleClick} disabled={isDisabled} type={type ? type : "button"}>
+      {iconName ? <span className="buttonIconStyle">{iconName}</span> :''}
+      {label}
+    </button>
   );
 };
-// main props
-ButtonComponent.propTypes = {
-  active: PropTypes.bool,
-  arialabel: PropTypes.string,
-  block: PropTypes.bool,
-  color: PropTypes.string,
-  disabled: PropTypes.bool,
-  outline: PropTypes.bool,
+
+Button.propTypes = {
+  variant: PropTypes.oneOf(
+    "normal",
+    "primary",
+    "quickbook",
+    "secondary",
+    "error",
+    "link",
+    "login",
+    "signup",
+    "discard",
+    "outline",
+    "normalOutline",
+    "dte",
+    "linkbtn",
+    "default",
+    "add",
+    "upload"
+  ),
+  size: PropTypes.oneOf("sm", "md", "lg"),
   label: PropTypes.string,
+  onClick: PropTypes.func,
+  isDisabled: PropTypes.bool
 };
-//default props
 
-ButtonComponent.defaultProps = {
-  active: false,
-  arialabel: "",
-  block: false,
-  color: "",
-  disabled: false,
-  outline: false,
+Button.defaultProps = {
+  variant: "normal",
+  size: "sm",
   label: "",
+  onClick: null,
+  isDisabled: false
 };
 
-export default ButtonComponent;
+export default React.memo(Button, isEqual);

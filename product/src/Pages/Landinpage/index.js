@@ -17,7 +17,8 @@ import {
 } from "react-bootstrap";
 import { Divider } from '@material-ui/core';
 
-import Header from "../../Components/Header/header"
+import Header from "../../Components/Header"
+import Footer from "../../Components/Footer"
 // import SearchIcon from "@material-ui/icons/Search";
 // import BusinessIcon from "@material-ui/icons/Business";
 // import AssignmentIndIcon from "@material-ui/icons/AssignmentInd";
@@ -286,79 +287,8 @@ function Headercomp() {
         </Col> */}
           </Row>
         </div>
-
-        <div className="footer">
-          <Row className="row-last">
-            {/* <Col md={2}>
-        <div className="img-one">
-            hello
-        </div>
-        </Col> */}
-            <Col md={2}>
-              <div className="Business">
-                <h5>Businesses</h5>
-                <hr />
-                <li>Businesses For Sale</li>
-                <li>Inverstment Oppertunities</li>
-                <li>Business Assets For sale</li>
-                <br />
-              </div>
-            </Col>
-            <Col md={2}>
-              <div className="investors-one">
-                <h5>Investors</h5>
-                <hr />
-                <li>Individual Investors</li>
-                <li>Business Buyers</li>
-                <li>Corporate Investors</li>
-                <li>Venture Capital Firms</li>
-                <li>Private Equality Firms</li>
-                <li>Business Lenders</li>
-                <br />
-              </div>
-            </Col>
-            <Col md={2}>
-              <div className="advisors">
-                <h5>Advisors</h5>
-                <hr />
-                <li>Business Seeking</li>
-                <li>Company Secratory</li>
-                <div className="franchesis">
-                  <h5>Franchises</h5>
-                  <hr />
-                  <li>Franchises For Sale</li>
-                  <li>Franchises Investors</li>
-                </div>
-                <br />
-              </div>
-            </Col>
-            <Col md={2}>
-              <div className="get-started">
-                <h5>Get Started</h5>
-                <hr />
-                <li>Sell Your Business</li>
-                <li>Finance Your Business</li>
-                <li>Buy a Business</li>
-                <li>invest in a Business</li>
-                <li>Value Your Business</li>
-                <li>Register as Advisor</li>
-                <br />
-              </div>
-            </Col>
-            <Col md={2}>
-              <div className="Company">
-                <h5>Company</h5>
-                <hr />
-                <li>About</li>
-                <li>Testimonials</li>
-                <li>Blog</li>
-                <li>FAQs</li>
-                <br />
-              </div>
-            </Col>
-          </Row>
-        </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -1,6 +1,8 @@
 // Business Registration
 
 import React, { useState } from "react";
+import { Container, Divider } from "@material-ui/core";
+
 import "./style.scss";
 import { Grid } from "../../Components/Grid";
 import Paper from "@material-ui/core/Paper";
@@ -33,9 +35,18 @@ import {
   netprofitturnover,
   ebitdamargin,
   amountsdetails,
-  reasonforsale
+  reasonforsale,
 } from "../helpers/options_data";
-import Header from "../../Components/Header/header";
+import { GoLocation } from "react-icons/go";
+import { AiTwotoneCalendar } from "react-icons/ai";
+import { BsLink45Deg, BsFillPencilFill } from "react-icons/bs";
+import {
+  AiFillFacebook,
+  AiFillGoogleCircle,
+  AiFillLinkedin,
+} from "react-icons/ai";
+import Header from "../../Components/Header";
+import Footer from "../../Components/Footer"
 
 const BusinessRegister = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -49,10 +60,10 @@ const BusinessRegister = () => {
     <div className="wrapper">
       <Header />
       <Grid break="lg">
-        <Grid.Cell span={30}>
-          <Box component={Paper} p={3} className="m-2">
+        <Grid.Cell span={25}>
+          <Box component={Paper} p={1}>
             <Row>
-              <Col lg="4">
+              <Col lg={3}>
                 <Avatar
                   className="user_avatar"
                   style={{
@@ -63,31 +74,71 @@ const BusinessRegister = () => {
                   alt="Remy Sharp"
                   src="/images/user_profile.jpg"
                 />
-                <br />
-                <div className="ml-1">
-                  <p>
-                    <b>Ragul V</b>
-                  </p>
-                </div>
               </Col>
-              <Col lg="8">
-                <br />
-                <DateRangeIcon fontSize="inherit" />
-                &ensp;21/01/2021
-                <br />
-                <EmailIcon fontSize="inherit" />
-                &ensp;vragul0602@gmail.com
-                <br />
-                <LocalPhoneIcon fontSize="inherit" />
-                &ensp;9994972098
+              <Col lg={9}>
+                <div className="ml-1">
+                  <b>Ragul V</b>
+                </div>
+                {/* <EmailIcon fontSize="inherit" /> */}
+                <div>vragul0602@gmail.com</div>
               </Col>
             </Row>
           </Box>
-          <Box component={Paper} p={3} className="m-2">
-            <h6>AllConnetO Recommendations</h6>
+          <Box component={Paper} p={1} className="mt-1">
+            <p className="text-center active-tag">Profile Activated</p>
+            <Row className="ml-1" style={{ lineHeight: "3px" }}>
+              <Col lg={6}>
+                <p style={{ fontSize: "13px" }}>Industries</p>
+                <p style={{ fontSize: "13px" }}>Locations</p>
+                <p style={{ fontSize: "13px" }}>Deal Size</p>
+                <p style={{ fontSize: "13px" }}>Recent Payments</p>
+              </Col>
+              <Col lg={6}>
+                <p style={{ fontSize: "13px" }}>All Industries</p>
+                <p style={{ fontSize: "13px" }}>India</p>
+                <p style={{ fontSize: "13px" }}>500 C</p>
+                <p style={{ fontSize: "13px" }}>Free Trial</p>
+              </Col>
+            </Row>
+            <Divider />
+            <Row className="ml-1 mt-2" style={{ lineHeight: "2px" }}>
+              <Col lg={6}>
+                <p style={{ fontSize: "13px" }}>
+                  <GoLocation />
+                  &nbsp;India
+                </p>
+                <p style={{ fontSize: "13px" }}>
+                  <AiTwotoneCalendar />
+                  &nbsp;Joined Oct 21
+                </p>
+                <p style={{ fontSize: "13px" }}>
+                  <BsLink45Deg />
+                  &nbsp;Asia/Kolkata
+                </p>
+              </Col>
+              <Col lg={6}>
+                <p style={{ fontSize: "13px" }}>
+                  <AiFillFacebook />
+                  &nbsp;Facebook
+                </p>
+                <p style={{ fontSize: "13px" }}>
+                  <AiFillLinkedin />
+                  &nbsp;LinkedIn
+                </p>
+                <p style={{ fontSize: "13px" }}>
+                  <AiFillGoogleCircle />
+                  &nbsp;Google
+                </p>
+              </Col>
+            </Row>
+            <Divider />
+            <p className="text-center mt-2">
+              <BsFillPencilFill />
+              &nbsp;Account Details
+            </p>
           </Box>
         </Grid.Cell>
-        <Grid.Cell span={70} className="mr-2 mb-5">
+        <Grid.Cell span={75} className="mr-2 mb-5">
           <Box component={Paper} p={2} className="mt-2">
             <h5>My Business List</h5>
           </Box>
@@ -621,6 +672,7 @@ const BusinessRegister = () => {
           </Box>
         </Grid.Cell>
       </Grid>
+      <Footer />
     </div>
   );
 };

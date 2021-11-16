@@ -17,6 +17,7 @@ const Login = () => {
   const history = useHistory();
 
   useEffect(() => {
+    document.title= "Logup | Login | allconnecto"
     localStorage.clear();
     cookie.remove("business");
     console.log("on login session cleared");
@@ -108,9 +109,9 @@ const Login = () => {
                       <img
                         style={{
                           height: "60%",
-                          width: "29%",
+                          width: "20%",
                           display: "flex",
-                          marginLeft: "45px",
+                          marginLeft: "65px",
                           borderRadius: "50%",
                           marginTop: "10px",
                         }}
@@ -120,11 +121,11 @@ const Login = () => {
                     <div style={{ display: "flex", width: "50%" }}>
                       <img
                         style={{
-                          height: "45%",
-                          width: "40%",
+                          height: "60%",
+                          width: "32%",
                           display: "flex",
                           marginLeft: "1px",
-                          marginTop: "13px",
+                          marginTop: "10px",
                           borderRadius: "50%",
                         }}
                         src="https://1000logos.net/wp-content/uploads/2016/11/Google-Symbol.png"

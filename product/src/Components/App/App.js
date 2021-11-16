@@ -11,7 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import firebase from "../../firebase";
 import history from "../../history";
 
-import { LandingPage, Businesspage, Login, Dashboard } from "../../Pages";
+import { LandingPage, Businesspage, Login, Dashboard, ListingPage } from "../../Pages";
 
 function App() {
   const [authenticated, setauthenticated] = useState({
@@ -59,10 +59,10 @@ function App() {
         <Switch>
           <Route exact path="/" component={Login} />
           <Route exact path="/login" component={Login} />
-          {/* <Route exact path="/login" component={Login} /> */}
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
           <PrivateRoute exact path="/landing-page" component={LandingPage} />
           <PrivateRoute exact path="/business-page" component={Businesspage} />
+          <PrivateRoute exact path="/listing-page" component={ListingPage} />
         </Switch>
       </Router>
     </div>

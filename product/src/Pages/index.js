@@ -1,17 +1,15 @@
 // Index Page
 
-import Test from "./test"
 import Login from "./loginpage/login"
 import Dashboard from "./dashboard"
-// import LoginCopy from "./loginpage/logincopy"
 import LandingPage from "./Landinpage"
 import Businesspage from "./business_reg"
+import ListingPage from "./listingpage";
 
 export {
-    Test,
     Login,
     Dashboard,
-    // LoginCopy,
     LandingPage,
     Businesspage,
+    ListingPage
 }

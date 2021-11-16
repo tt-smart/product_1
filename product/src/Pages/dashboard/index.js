@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./style.scss";
 // import Header from '../../common/header';
 // import Footer from '../../common/footer';
@@ -26,6 +26,10 @@ import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 
 const Dashboard = () => {
+  useEffect(() => {
+    document.title="Dashboard | allconnecto"
+  },[])
+
   return (
     <div
       style={{

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./style.scss"
 import {
   Navbar,
@@ -28,6 +28,10 @@ import Footer from "../../Components/Footer"
 // import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 
 function Headercomp() {
+  useEffect (() => {
+    document.title="Landing | allconnecto"
+  })
+  
   return (
     <div>
         <Header /> 
